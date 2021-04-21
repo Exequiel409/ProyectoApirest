@@ -1,13 +1,15 @@
 import { Router } from "express";
+import * as empleadosController from "../controllers/empleados.controller";
+
 const router= Router();
 
-router.get('/',(req,res) =>
-{
-    res.send('Task');
-})
-router.get('/Login',(req,res) =>
-{
-    res.send('Ingrese sus datos');
-})
+router.get('/',empleadosController.ListarEmpleados)
+
+router.post('/',empleadosController.AgregaEmpleado)
+
+router.get('/:id',empleadosController.GetEmpleado)
+
+router.delete('/:id', empleadosController.DeleteEmpleado)
+
 
 export default router;

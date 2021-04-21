@@ -1,0 +1,19 @@
+###
+
+GET http://localhost:3000/api/task
+###
+POST http://localhost:3000/api/task
+Content-Type: application/json
+
+{
+        "documento":"12306006", 
+        "apellido": "Sarmiento",  
+        "nombre": "Silvia",  
+        "nacionalidad": "Española"
+}
+###
+
+GET http://localhost:3000/api/task/6080b0cfc3376e3f50d30947
+###
+
+DELETE  http://localhost:3000/api/task/6080b0cfc3376e3f50d30947
